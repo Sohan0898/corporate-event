@@ -1,17 +1,17 @@
 const Banner = () => {
   return (
-    <div className="max-w-screen-2xl mx-auto px-2 md:px-6 lg:px-16 mb-12 ">
+    <div className=" mx-auto  mb-16 ">
       <div className="carousel w-full">
         <div id="slide1" className="carousel-item relative w-full">
           <div
-            className="hero h-[70vh] rounded-2xl"
+            className="hero h-[80vh] "
             style={{
               backgroundImage:
-                "url(https://i.ibb.co/LnL0D6n/28945600-98y-8dnmspj5e9imsor55ko32.jpg)",
-              borderRadius: "16px",
+                "url(https://i.ibb.co/LnL0D6n/28945600-98y-8dnmspj5e9imsor55ko32.jpg)",backgroundSize: "cover",
+              
             }}
           >
-            <div className="hero-overlay bg-gradient-to-b from-[#12121200]  to-[#121212] rounded-2xl"></div>
+            <div className="hero-overlay bg-gradient-to-b from-[#12121200]  to-[#121212] "></div>
             <div className="hero-content text-center text-neutral-content">
               <div className="">
                 <h1 className="mb-5 text-xl md:text-3xl lg:text-5xl text-white font-bold">
@@ -43,14 +43,15 @@ const Banner = () => {
         </div>
         <div id="slide2" className="carousel-item relative w-full">
         <div
-            className="hero h-[70vh] rounded-2xl"
+            className="hero h-[80vh]"
             style={{
               backgroundImage:
                 "url(https://i.ibb.co/THMxhCX/male-business-executive-giving-speech-1.jpg)",
-              borderRadius: "16px",
+                backgroundSize: "cover",
+              
             }}
           >
-            <div className="hero-overlay bg-gradient-to-b from-[#12121200]  to-[#121212] rounded-2xl"></div>
+            <div className="hero-overlay bg-gradient-to-b from-[#12121200]  to-[#121212] "></div>
             <div className="hero-content text-center text-neutral-content">
               <div className="">
                 <h1 className="mb-5 text-xl md:text-3xl lg:text-5xl text-white font-bold">
@@ -81,14 +82,14 @@ const Banner = () => {
         </div>
         <div id="slide3" className="carousel-item relative w-full">
         <div
-            className="hero h-[70vh] rounded-2xl"
+            className="hero h-[80vh] "
             style={{
               backgroundImage:
-                "url(https://i.ibb.co/3cjC275/decorated-wedding-restaurant.jpg)",
-              borderRadius: "16px",
+                "url(https://i.ibb.co/3cjC275/decorated-wedding-restaurant.jpg)",backgroundSize: "cover",
+              
             }}
           >
-            <div className="hero-overlay bg-gradient-to-b from-[#12121200]  to-[#121212] rounded-2xl"></div>
+            <div className="hero-overlay bg-gradient-to-b from-[#12121200]  to-[#121212] "></div>
             <div className="hero-content text-center text-neutral-content">
               <div className="">
                 <h1 className="mb-5  text-xl md:text-3xl lg:text-5xl text-white font-bold">
@@ -119,14 +120,14 @@ const Banner = () => {
         </div>
         <div id="slide4" className="carousel-item relative w-full">
         <div
-            className="hero h-[70vh] rounded-2xl"
+            className="hero h-[80vh] "
             style={{
               backgroundImage:
-                "url(https://i.ibb.co/0jYRZsd/male-business-executive-giving-speech.jpg)",
-              borderRadius: "16px",
+                "url(https://i.ibb.co/0jYRZsd/male-business-executive-giving-speech.jpg)",backgroundSize: "cover",
+              
             }}
           >
-            <div className="hero-overlay bg-gradient-to-b from-[#12121200]  to-[#121212] rounded-2xl"></div>
+            <div className="hero-overlay bg-gradient-to-b from-[#12121200]  to-[#121212] "></div>
             <div className="hero-content text-center text-neutral-content">
               <div className="">
                 <h1 className="mb-5  text-xl md:text-3xl lg:text-5xl text-white font-bold">

@@ -1,0 +1,51 @@
+[
+    {
+      "id": 1,
+      "title": "Conferences and Seminars",
+      "short_description": "Join us for insightful conferences and seminars.",
+      "description": "Conferences and seminars are professional gatherings that bring together experts, thought leaders, and industry professionals to discuss and exchange ideas on specific topics. These events often feature keynote speakers, panel discussions, and breakout sessions, providing attendees with valuable insights and networking opportunities. Conferences and seminars play a crucial role in knowledge sharing, fostering innovation, and staying updated on industry trends.",
+      "price": 2000,
+      "image": "https://i.ibb.co/k598HrL/female-business-executive-giving-speech.jpg"
+    },
+    {
+      "id": 2,
+      "title": "Trade Shows and Expos",
+      "short_description": "Explore the latest innovations at our trade shows and expos.",
+      "description": "Trade shows and expos are large-scale exhibitions where businesses and organizations showcase their products and services to a targeted audience. These events attract potential customers, investors, and industry peers. Exhibitors set up booths and interactive displays to engage with attendees and generate leads. Trade shows and expos are invaluable for launching new products, building brand awareness, and forging strategic partnerships within an industry.",
+      "price": 1500,
+      "image": "https://i.ibb.co/wS55q6C/7378800-32057.jpg"
+    },
+    {
+      "id": 3,
+      "title": "Team Building Workshops",
+      "short_description": "Strengthen your team with our team building workshops.",
+      "description": "Team building workshops are structured activities designed to enhance collaboration, communication, and trust among team members. These workshops often include team challenges, problem-solving exercises, and group discussions. By participating in these events, employees can strengthen their relationships, improve teamwork, and boost morale. Team building workshops contribute to a more cohesive and productive workforce.",
+      "price": 3000,
+      "image": "https://i.ibb.co/rdKbPqW/4016995-15364.jpg"
+    },
+    {
+      "id": 4,
+      "title": "Product Launches",
+      "short_description": "Launch your product in style with our event services.",
+      "description": "Product launches are events organized to introduce a new product or service to the market. They are typically highly orchestrated affairs, featuring presentations, demonstrations, and marketing campaigns to generate buzz and interest. Product launches aim to create a positive first impression, attract customers, and secure media coverage. These events are essential for building excitement and driving sales for a company's latest offerings.",
+      "price": 2500,
+      "image": "https://i.ibb.co/pztkdSD/corporate-businessman-giving-presentation-large-audience.jpg"
+    },
+    {
+      "id": 5,
+      "title": "Corporate Meetings",
+      "short_description": "Host efficient and productive corporate meetings with us.",
+      "description": "Corporate meetings encompass a wide range of gatherings within an organization, including board meetings, management briefings, and departmental discussions. These meetings serve as forums for decision-making, problem-solving, and information sharing among employees and leadership. Effective corporate meetings are essential for aligning company objectives, ensuring clear communication, and achieving organizational goals.",
+      "price": 1000,
+      "image": "https://i.ibb.co/Srrq7Zr/business-people-board-room-meeting.jpg"
+    },
+    {
+      "id": 6,
+      "title": "Award Ceremonies",
+      "short_description": "Celebrate excellence with our award ceremony services.",
+      "description": "Award ceremonies are celebratory events that recognize and honor outstanding achievements and contributions. They are often held to acknowledge employees, partners, or individuals who have excelled in their respective fields. These ceremonies create a sense of accomplishment, motivate recipients, and foster a culture of recognition within an organization. Award ceremonies are a meaningful way to show appreciation and encourage excellence.",
+      "price": 1800,
+      "image": "https://i.ibb.co/TgDrzLq/business-man-cute-smiling-guy-dark-blue-suit-with-tie-holding-trophy.jpg"
+    }
+  ]
+  

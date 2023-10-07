@@ -2,8 +2,8 @@ import Logo from "../Header/Navbar/Logo";
 
 const Footer = () => {
   return (
-    <div className="max-w-screen-2xl bg-gray-100 p-2 w-4/5 mx-auto rounded-lg  my-16">
-      <footer className="footer mt-16 mx-auto w-3/4 p-10 bg-gray-800 rounded-lg rounded-b-none text-white ">
+    <div className=" bg-gray-200 py-16 mx-auto rounded-lg  ">
+      <footer className="footer max-w-screen-2xl mt-16 mx-auto w-4/5 py-10 px-16 bg-gray-900 rounded-lg  text-white ">
         <nav>
           <header className="footer-title">Services</header>
           <a className="link link-hover">Branding</a>
@@ -36,7 +36,7 @@ const Footer = () => {
               <input
                 type="text"
                 placeholder="username@site.com"
-                className="input input-bordered w-full pr-16"
+                className="input input-bordered text-black w-full pr-16"
               />
               <button className="btn btn-primary absolute top-0 right-0 rounded-l-none">
                 Subscribe
@@ -45,7 +45,7 @@ const Footer = () => {
           </fieldset>
         </form>
       </footer>
-      <footer className="footer mb-6 mt-6 rounded-lg rounded-t-none px-10 w-3/4 mx-auto py-4 border-t text-base-content border-base-300">
+      <footer className="footer mb-6 mt-6 rounded-lg rounded-t-none px-10 w-4/5 mx-auto py-4 border-t text-base-content border-base-300">
         <aside className="items-center grid-flow-col">
           <Logo></Logo>
           <p>
