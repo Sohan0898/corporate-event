@@ -1,5 +1,6 @@
+/* eslint-disable react/prop-types */
 import ServicesCard from "../ServicesCard/ServicesCard";
-import PropTypes from 'prop-types';
+
 
 const Services = ({cards}) => {
     return (
@@ -24,9 +25,3 @@ const Services = ({cards}) => {
 };
 
 export default Services;
-
-Services.propTypes = {
-    cards: PropTypes.array,
-
-
-}

@@ -1,14 +1,42 @@
+/* eslint-disable react/prop-types */
 import { Link } from "react-router-dom";
-import PropTypes from 'prop-types';
+import { toast } from "react-toastify";
+
 
 const ServicesDetailsCard = ({details}) => {
 
     const {
+      id,
         title,
         image,
         description,
         price
       } = details|| {};
+
+
+      const handleBookEvent = () => {
+        const addedBookEvent = [];
+        const services = JSON.parse(localStorage.getItem("event"));
+    
+        if (!services) {
+          addedBookEvent.push(details);
+          localStorage.setItem("event", JSON.stringify(addedBookEvent));
+          toast.success("You Purchase Service Successfully!");
+        } else {
+          const isExits = services.find((details) => details.id == id);
+          if (!isExits) {
+            addedBookEvent.push(...services, details);
+            localStorage.setItem("event", JSON.stringify(addedBookEvent));
+            toast.success("You Purchase Service Successfully!");
+          } else {
+            toast.warn("You Already Purchase Service!");
+          }
+        }
+      };
+    
+
+
+
 
 
     return (
@@ -50,7 +78,7 @@ const ServicesDetailsCard = ({details}) => {
   </div>
 </div>
 <div className="flex justify-center items-center gap-4  mt-12">
-    <button className="btn bg-amber-500 capitalize text-white  text-xl">Book Events</button>
+    <button onClick={handleBookEvent} className="btn bg-amber-500 capitalize text-white  text-xl">Book Events</button>
     <Link to={'/'}><button className="btn bg-gray-900 capitalize text-white  text-xl">Go Home</button></Link>
 </div>
         </div>
@@ -59,8 +87,3 @@ const ServicesDetailsCard = ({details}) => {
 
 export default ServicesDetailsCard;
 
-ServicesDetailsCard.propTypes = {
-    details: PropTypes.array,
-
-
-}

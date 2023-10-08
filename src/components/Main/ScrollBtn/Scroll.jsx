@@ -5,6 +5,7 @@ const Scroll = () => {
     const scrollToTop = () => {
         const options = {
           duration: 500,
+          delay: 100,
           smooth: true,
         };
         animateScroll.scrollToTop(options);
@@ -12,9 +13,8 @@ const Scroll = () => {
     
       return (
         <div className="flex justify-end relative">
-            <button onClick={scrollToTop} className="btn  absolute font-bold bottom-10 right-4 shadow-md bg-amber-500 rounded-full text-white text-xl scroll-to-top-button">
-          <AiOutlineToTop />
-        </button>
+            
+            <button><kbd onClick={scrollToTop} className=" kbd kbd-md absolute font-bold bottom-10 right-4 shadow-md bg-amber-500 rounded-full text-white text-xl"><AiOutlineToTop /></kbd></button>
         </div>
       );
     };

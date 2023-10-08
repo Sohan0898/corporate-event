@@ -4,6 +4,8 @@ import Banner from "../../components/Header/Banner/Banner";
 import Services from "../../components/Main/Services/Services";
 import Reviews from "../../components/Main/Reviews/Reviews";
 import Scroll from "../../components/Main/ScrollBtn/Scroll";
+import EventManage from "../../components/Main/EventManage/EventManage";
+
 
 
 const Home = () => {
@@ -16,6 +18,7 @@ const Home = () => {
             
             <Services cards={cards}></Services>
             
+            <EventManage></EventManage>
             <Reviews></Reviews>
             <Footer></Footer>
             <Scroll></Scroll>
