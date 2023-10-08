@@ -36,12 +36,14 @@ const AuthProvider = ({ children }) => {
   };
 
   useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+    const unSubscribe = onAuthStateChanged(auth, currentUser => {
       console.log("ovserving", currentUser);
       setUser(currentUser);
     });
 
-    return unsubscribe();
+    return ()=>{
+      unSubscribe();
+    } 
   }, []);
 
   const authInfo = { user, googleSignIn, signUpWithEmail, signInWithEmail, logOut };

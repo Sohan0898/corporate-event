@@ -1,8 +1,18 @@
 import { Link, NavLink } from "react-router-dom";
 import Logo from "./Logo";
 import Carts from "./Carts";
+import { useContext } from "react";
+import { AuthContext } from "../../Provider/AuthProvider";
 
 const Navbar = () => {
+  const { user, logOut } = useContext(AuthContext);
+
+  const handleLogOut = () => {
+    logOut()
+      .then(() => console.log("Sign-out successful"))
+      .catch((error) => console.log(error));
+  };
+
   const navMenu = (
     <>
       <li>
@@ -56,11 +66,24 @@ const Navbar = () => {
         </div>
         <div className="navbar-end">
           <Carts></Carts>
-          <Link to={"/login"}>
-            <button className="btn focus:outline-none font-bold bg-amber-500 hover:bg-amber-500  focus:ring-amber-500  rounded-lg  px-5 py-2 mr-2 mb-2">
-              Login
-            </button>
-          </Link>
+
+          {user ? (
+            <>
+              <span>{user.email}</span>
+              <a
+                onClick={handleLogOut}
+                className="btn focus:outline-none font-bold bg-amber-500 hover:bg-amber-500  focus:ring-amber-500  rounded-lg  px-5 py-2 mr-2 mb-2"
+              >
+                Logout
+              </a>
+            </>
+          ) : (
+            <Link to={"/login"}>
+              <button className="btn focus:outline-none font-bold bg-amber-500 hover:bg-amber-500  focus:ring-amber-500  rounded-lg  px-5 py-2 mr-2 mb-2">
+                Login
+              </button>
+            </Link>
+          )}
         </div>
       </div>
     </div>

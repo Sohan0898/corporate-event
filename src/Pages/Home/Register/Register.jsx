@@ -1,31 +1,35 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../../components/Provider/AuthProvider";
+import { toast } from "react-toastify";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Register = () => {
   const { signUpWithEmail } = useContext(AuthContext);
+  const [successFull, setSuccessFull] = useState("");
 
   const handleRegister = (e) => {
     e.preventDefault();
     const name = e.target.name.value;
     const email = e.target.email.value;
     const password = e.target.password.value;
-    console.log(name,email, password);
+    console.log(name, email, password);
 
+    setSuccessFull("");
 
-    
     // create user
     signUpWithEmail(email, password)
-    .then((result) => {
+      .then((result) => {
         console.log(result.user);
+        setSuccessFull("User created successfully");
+
+        toast.success(successFull, setSuccessFull);
       })
       .catch((error) => {
         console.error(error);
-      })
+      });
   };
-
-
- 
 
   return (
     <div className="flex justify-center items-center h-[80vh]">
@@ -38,7 +42,8 @@ const Register = () => {
             Enter your details to register.
           </p>
         </div>
-        <form onSubmit={handleRegister}
+        <form
+          onSubmit={handleRegister}
           className="mt-8 mb-2 w-80 max-w-screen-lg sm:w-96"
         >
           <div className="mb-4 flex flex-col gap-6">
@@ -124,25 +129,37 @@ const Register = () => {
           </div>
           <button
             className="block w-full select-none rounded-lg bg-gradient-to-tr from-amber-600 to-amber-400 py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-white shadow-md shadow-amber-500/20 transition-all hover:shadow-lg hover:shadow-amber-500/40 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
-            
             data-ripple-light="true"
           >
             Register
           </button>
-          
         </form>
+
         <p className=" mt-4 block text-center font-sans text-base font-normal leading-relaxed text-gray-700 antialiased">
-            Already have an account?
-            <Link to={"/login"}>
-              <button
-                className="pl-2 font-bold text-amber-500 transition-colors hover:text-blue-700"
-                href="#"
-              >
-                Login Here
-              </button>
-            </Link>
-          </p>
+          Already have an account?
+          <Link to={"/login"}>
+            <button
+              className="pl-2 font-bold text-amber-500 transition-colors hover:text-blue-700"
+              href="#"
+            >
+              Login Here
+            </button>
+          </Link>
+        </p>
       </div>
+
+      <ToastContainer
+        position="bottom-center"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
+      ></ToastContainer>
     </div>
   );
 };
