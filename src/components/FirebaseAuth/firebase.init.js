@@ -10,7 +10,7 @@ const firebaseConfig = {
   projectId: "corporate-events-de044",
   storageBucket: "corporate-events-de044.appspot.com",
   messagingSenderId: "842025368096",
-  appId: "1:842025368096:web:918067a2ddd11efa201a45"
+  appId: "1:842025368096:web:918067a2ddd11efa201a45",
 };
 
 // Initialize Firebase

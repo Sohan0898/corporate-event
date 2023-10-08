@@ -1,8 +1,22 @@
 /* eslint-disable react/no-unescaped-entities */
-
 import { Link } from "react-router-dom";
+import { AiFillGoogleCircle } from "react-icons/ai";
+import { useContext } from "react";
+import { AuthContext } from "../../components/Provider/AuthProvider";
 
 const Login = () => {
+  const { googleSignIn } = useContext(AuthContext);
+
+  const handleGoogleSignIn = () => {
+    googleSignIn()
+      .then((result) => {
+        console.log(result.user);
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  };
+
   return (
     <div className="flex justify-center items-center h-[80vh]">
       <div className="relative flex w-96 flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">
@@ -88,6 +102,22 @@ const Login = () => {
               </button>
             </Link>
           </p>
+        </div>
+
+        <div className="divider">OR</div>
+
+        <div className="mx-auto mb-5">
+          <button
+            onClick={handleGoogleSignIn}
+            className="flex select-none items-center gap-3 rounded-lg border border-blue-gray-500 py-3.5 px-7 text-center align-middle font-sans text-sm font-bold uppercase text-blue-gray-500 transition-all hover:opacity-75 focus:ring focus:ring-blue-gray-200 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+            type="button"
+            data-ripple-dark="true"
+          >
+            <p className="text-3xl text-amber-500">
+              <AiFillGoogleCircle></AiFillGoogleCircle>
+            </p>
+            Continue with Google
+          </button>
         </div>
       </div>
     </div>

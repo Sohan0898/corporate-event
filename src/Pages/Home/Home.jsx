@@ -6,24 +6,21 @@ import Reviews from "../../components/Main/Reviews/Reviews";
 import Scroll from "../../components/Main/ScrollBtn/Scroll";
 import EventManage from "../../components/Main/EventManage/EventManage";
 
-
-
 const Home = () => {
-    
-    const cards = useLoaderData();
+  const cards = useLoaderData();
 
-    return (
-        <div>
-            <Banner></Banner>
-            
-            <Services cards={cards}></Services>
-            
-            <EventManage></EventManage>
-            <Reviews></Reviews>
-            <Footer></Footer>
-            <Scroll></Scroll>
-        </div>
-    );
+  return (
+    <div>
+      <Banner></Banner>
+
+      <Services cards={cards}></Services>
+
+      <EventManage></EventManage>
+      <Reviews></Reviews>
+      <Footer></Footer>
+      <Scroll></Scroll>
+    </div>
+  );
 };
 
 export default Home;

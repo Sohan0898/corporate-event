@@ -3,16 +3,12 @@ import Logo from "./Logo";
 import Carts from "./Carts";
 
 const Navbar = () => {
-  
-
-
-
   const navMenu = (
     <>
       <li>
         <NavLink to={"/"}>Home</NavLink>
       </li>
-      
+
       <li>
         <NavLink to={"/contact"}>Contact</NavLink>
       </li>
@@ -60,9 +56,11 @@ const Navbar = () => {
         </div>
         <div className="navbar-end">
           <Carts></Carts>
-         <Link to={'/login'}><button className="btn focus:outline-none font-bold bg-amber-500 hover:bg-amber-500  focus:ring-amber-500  rounded-lg  px-5 py-2 mr-2 mb-2">
-            Login
-          </button></Link> 
+          <Link to={"/login"}>
+            <button className="btn focus:outline-none font-bold bg-amber-500 hover:bg-amber-500  focus:ring-amber-500  rounded-lg  px-5 py-2 mr-2 mb-2">
+              Login
+            </button>
+          </Link>
         </div>
       </div>
     </div>
