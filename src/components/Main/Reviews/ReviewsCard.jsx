@@ -1,9 +1,9 @@
-/* eslint-disable react/no-unescaped-entities */
+
 
 const ReviewsCard = () => {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mx-auto pb-16  justify-center item-center  gap-10">
-      <div className="relative grid md:h-[450px] lg:h-[400px] w-full flex-col items-end justify-center overflow-hidden rounded-xl bg-base-200 bg-clip-border border-4 border-amber-700  text-center ">
+      <div data-aos="fade-up"   data-aos-duration="2000" className= "relative grid md:h-[450px] lg:h-[400px] w-full flex-col items-end justify-center overflow-hidden rounded-xl bg-base-200 bg-clip-border border-4 border-amber-700  text-center ">
         <div className="absolute inset-0 m-0 h-full w-full overflow-hidden rounded-none bg-transparent  bg-cover bg-clip-border bg-center  shadow-none"></div>
         <div className="relative p-6  px-6 md:px-12">
           <div>
@@ -39,7 +39,7 @@ const ReviewsCard = () => {
           <p className="md:h-[200px] lg:h-[180px] pt-3 text-gray-600   ">
             Attended the Trade Show last week, and it was fantastic! Got to see
             the latest tech innovations and networked with industry experts. A
-            must for anyone in tech. Can't wait for next years event!
+            must for anyone in tech. Cant wait for next years event!
           </p>
           <h2 className="text-xl pt-3 font-bold text-black">John Smith</h2>
           <h5 className="mb-4 block font-sans text-sm  leading-snug tracking-normal text-gray-400 antialiased">
@@ -53,7 +53,7 @@ const ReviewsCard = () => {
         </div>
       </div>
 
-      <div className="relative grid md:h-[450px] lg:h-[400px] w-full   flex-col items-end justify-center overflow-hidden rounded-xl bg-base-200 bg-clip-border border-4 border-amber-700  text-center ">
+      <div data-aos="fade-down"   data-aos-duration="2000" className="relative grid md:h-[450px] lg:h-[400px] w-full   flex-col items-end justify-center overflow-hidden rounded-xl bg-base-200 bg-clip-border border-4 border-amber-700  text-center ">
         <div className="absolute inset-0 m-0 h-full w-full overflow-hidden rounded-none bg-transparent  bg-cover bg-clip-border bg-center  shadow-none"></div>
         <div className="relative p-6  px-6 md:px-12">
           <div>
@@ -104,7 +104,7 @@ const ReviewsCard = () => {
         </div>
       </div>
 
-      <div className="relative grid md:h-[450px] lg:h-[400px] w-full  flex-col items-end justify-center overflow-hidden rounded-xl bg-base-200 bg-clip-border border-4 border-amber-700  text-center ">
+      <div data-aos="fade-up"   data-aos-duration="2000" className="relative grid md:h-[450px] lg:h-[400px] w-full  flex-col items-end justify-center overflow-hidden rounded-xl bg-base-200 bg-clip-border border-4 border-amber-700  text-center ">
         <div className="absolute inset-0 m-0 h-full w-full overflow-hidden rounded-none bg-transparent  bg-cover bg-clip-border bg-center  shadow-none"></div>
         <div className="relative p-6  px-6 md:px-12">
           <div>

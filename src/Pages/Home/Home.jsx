@@ -14,7 +14,6 @@ const Home = () => {
       <Banner></Banner>
 
       <Services cards={cards}></Services>
-
       <EventManage></EventManage>
       <Reviews></Reviews>
       <Footer></Footer>

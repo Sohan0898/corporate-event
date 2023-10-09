@@ -1,6 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 import { Link, useNavigate } from "react-router-dom";
-import { AiFillGoogleCircle } from "react-icons/ai";
+
 import { useContext, useState} from "react";
 import { AuthContext } from "../../components/Provider/AuthProvider";
 import swal from 'sweetalert';
@@ -166,9 +166,9 @@ const Login = () => {
             type="button"
             data-ripple-dark="true"
           >
-            <p className="text-3xl text-amber-500">
-              <AiFillGoogleCircle></AiFillGoogleCircle>
-            </p>
+            
+            <img src="https://i.ibb.co/0f631Tn/icons8-google-48.png" alt="" />
+            
             Continue with Google
           </button>
         </div>

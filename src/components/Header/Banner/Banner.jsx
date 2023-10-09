@@ -1,6 +1,8 @@
+import { Link } from "react-router-dom";
+
 const Banner = () => {
   return (
-    <div className=" mx-auto  mb-16 ">
+    <div data-aos="zoom-up" data-aos-duration="2000" className=" mx-auto  mb-16 ">
       <div className="carousel w-full">
         <div id="slide1" className="carousel-item relative w-full">
           <div
@@ -12,7 +14,10 @@ const Banner = () => {
             }}
           >
             <div className="hero-overlay bg-gradient-to-b from-[#12121200]  to-[#121212] "></div>
-            <div className="hero-content text-center text-neutral-content">
+            <div
+              data-aos="zoom-in-up"
+              className="hero-content text-center text-neutral-content"
+            >
               <div className="">
                 <h1 className="mb-5 text-xl md:text-3xl lg:text-5xl text-white font-bold">
                   Where Business Meets <br />
@@ -25,12 +30,12 @@ const Banner = () => {
                   transform ordinary gatherings into extraordinary experiences.
                 </p>
                 <div className="flex justify-center items-center gap-5 pt-3">
-                  <button className="focus:outline-none text-white bg-amber-500 hover:bg-amber-500 focus:ring-4 focus:ring-amber-500 font-medium rounded-lg text-sm px-6 py-3 mr-2 mb-2 dark:focus:ring-amber-600">
-                    Explore
-                  </button>
-                  <button className=" text-amber-500 hover:text-white border border-amber-500 hover:bg-amber-500 focus:ring-4 focus:outline-none focus:ring-amber-500 font-medium rounded-lg text-sm px-6 py-3 text-center mr-2 mb-2 dark:border-amber-500 dark:text-amber-500 dark:hover:text-white dark:hover:bg-amber-500 dark:focus:ring-amber-600">
-                    Our Events
-                  </button>
+                  <Link to={'/register'}><button className="focus:outline-none text-white bg-amber-500 hover:bg-amber-500 focus:ring-4 focus:ring-amber-500 font-medium rounded-lg text-sm px-6 py-3 mr-2 mb-2 dark:focus:ring-amber-600">
+                    Register
+                  </button></Link>
+                  <Link to={'/contact'}><button className=" text-amber-500 hover:text-white border border-amber-500 hover:bg-amber-500 focus:ring-4 focus:outline-none focus:ring-amber-500 font-medium rounded-lg text-sm px-6 py-3 text-center mr-2 mb-2 dark:border-amber-500 dark:text-amber-500 dark:hover:text-white dark:hover:bg-amber-500 dark:focus:ring-amber-600">
+                    About Us
+                  </button></Link>
                 </div>
               </div>
             </div>
@@ -69,10 +74,10 @@ const Banner = () => {
                 </p>
                 <div className="flex justify-center items-center gap-5 pt-3">
                   <button className="focus:outline-none text-white bg-amber-500 hover:bg-amber-500 focus:ring-4 focus:ring-amber-500 font-medium rounded-lg text-sm px-6 py-3 mr-2 mb-2 dark:focus:ring-amber-600">
-                    Explore
+                    Register
                   </button>
                   <button className=" text-amber-500 hover:text-white border border-amber-500 hover:bg-amber-500 focus:ring-4 focus:outline-none focus:ring-amber-500 font-medium rounded-lg text-sm px-6 py-3 text-center mr-2 mb-2 dark:border-amber-500 dark:text-amber-500 dark:hover:text-white dark:hover:bg-amber-500 dark:focus:ring-amber-600">
-                    Our Events
+                    About Us
                   </button>
                 </div>
               </div>
@@ -111,10 +116,10 @@ const Banner = () => {
                 </p>
                 <div className="flex justify-center items-center gap-5 pt-3">
                   <button className="focus:outline-none text-white bg-amber-500 hover:bg-amber-500 focus:ring-4 focus:ring-amber-500 font-medium rounded-lg text-sm px-6 py-3 mr-2 mb-2 dark:focus:ring-amber-600">
-                    Explore
+                    Register
                   </button>
                   <button className=" text-amber-500 hover:text-white border border-amber-500 hover:bg-amber-500 focus:ring-4 focus:outline-none focus:ring-amber-500 font-medium rounded-lg text-sm px-6 py-3 text-center mr-2 mb-2 dark:border-amber-500 dark:text-amber-500 dark:hover:text-white dark:hover:bg-amber-500 dark:focus:ring-amber-600">
-                    Our Events
+                    About Us
                   </button>
                 </div>
               </div>
@@ -153,10 +158,10 @@ const Banner = () => {
                 </p>
                 <div className="flex justify-center items-center gap-5 pt-3">
                   <button className="focus:outline-none text-white bg-amber-500 hover:bg-amber-500 focus:ring-4 focus:ring-amber-500 font-medium rounded-lg text-sm px-6 py-3 mr-2 mb-2 dark:focus:ring-amber-600">
-                    Explore
+                    Register
                   </button>
                   <button className=" text-amber-500 hover:text-white border border-amber-500 hover:bg-amber-500 focus:ring-4 focus:outline-none focus:ring-amber-500 font-medium rounded-lg text-sm px-6 py-3 text-center mr-2 mb-2 dark:border-amber-500 dark:text-amber-500 dark:hover:text-white dark:hover:bg-amber-500 dark:focus:ring-amber-600">
-                    Our Events
+                    About Us
                   </button>
                 </div>
               </div>

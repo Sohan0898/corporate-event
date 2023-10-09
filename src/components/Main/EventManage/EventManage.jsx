@@ -5,7 +5,10 @@ const EventManage = () => {
     <div>
       <div className="  hero py-28 bg-base-200">
         <div className="hero-content max-w-screen-2xl gap-10  mx-auto px-2 md:px-6 lg:px-16 flex-col-reverse lg:flex-row-reverse ">
-          <div className="w-3/6 ">
+          <div className="w-3/6 "  data-aos="fade-right"
+     data-aos-offset="300"
+     data-aos-easing="ease-out-sine"
+     data-aos-duration="2000">
             <div className="pb-5">
               <h2>Conferences and Seminars</h2>
               <progress
@@ -56,8 +59,10 @@ const EventManage = () => {
               ></progress>
             </div>
           </div>
-          <div className="w-3/6  ">
-            <h1 className="text-5xl font-bold">
+          <div className="lg:w-3/6 px-4  "  data-aos="fade-left"
+     data-aos-offset="300"
+     data-aos-easing="ease-out-sine" data-aos-duration="2000">
+            <h1 className="text-5xl text-center lg:text-start font-bold">
               <span className="text-amber-500">Events</span> Manage!
             </h1>
             <p className="py-6">

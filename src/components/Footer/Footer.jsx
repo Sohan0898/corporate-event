@@ -2,8 +2,8 @@ import Logo from "../Header/Navbar/Logo";
 
 const Footer = () => {
   return (
-    <div className=" bg-gray-200 py-16 mx-auto rounded-lg  ">
-      <footer className="footer max-w-screen-2xl mt-16 mx-auto w-4/5 py-10 px-16 bg-gray-900 rounded-lg  text-white ">
+    <div className=" bg-gray-200   py-16 mx-auto rounded-lg  ">
+      <footer className="footer md:h-auto h-3/ max-w-screen-2xl mt-16 mx-auto w-4/5 py-10 px-16 bg-gray-900 rounded-lg  text-white ">
         <nav>
           <header className="footer-title">Services</header>
           <a className="link link-hover">Branding</a>

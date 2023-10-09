@@ -9,6 +9,8 @@ import Login from "../Pages/Login/Login";
 import Register from "../Pages/Home/Register/Register";
 import PrivateRoute from "./PrivateRoute";
 
+import Faq from "../Pages/Gallery/Faq";
+
 const myCreatedRoute = createBrowserRouter([
   {
     path: "/",
@@ -22,12 +24,17 @@ const myCreatedRoute = createBrowserRouter([
       },
       {
         path: "/booking",
-        element: <Booking></Booking>,
+        element: <PrivateRoute><Booking></Booking></PrivateRoute>,
       },
       {
         path: "/contact",
-        element: <Contact></Contact>,
+        element: <PrivateRoute><Contact></Contact></PrivateRoute>,
       },
+      {
+        path: "/faq",
+        element: <PrivateRoute><Faq></Faq></PrivateRoute>,
+      },
+
       {
         path: "/cardDetails/:id",
         element: <PrivateRoute><ServicesDetails></ServicesDetails></PrivateRoute>,
