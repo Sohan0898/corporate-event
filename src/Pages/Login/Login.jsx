@@ -1,5 +1,5 @@
 /* eslint-disable react/no-unescaped-entities */
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AiFillGoogleCircle } from "react-icons/ai";
 import { useContext, useState} from "react";
 import { AuthContext } from "../../components/Provider/AuthProvider";
@@ -9,6 +9,7 @@ import swal from 'sweetalert';
 const Login = () => {
   const { googleSignIn, signInWithEmail } = useContext(AuthContext);
   const [logError,setLogError]=useState('');
+  const navigate = useNavigate();
 
   const handleGoogleSignIn = () => {
 
@@ -16,7 +17,9 @@ const Login = () => {
     googleSignIn()
       .then((result) => {
         console.log(result.user);
+        
         swal("Awesome!", "You Successfully Logged in", "success");
+        navigate('/');
     
       })
       .catch((error) => {
@@ -39,7 +42,9 @@ const Login = () => {
       .then((result) => {
         console.log(result.user);
         e.target.reset();
+        
         swal("Awesome!", "You Successfully Logged in", "success");
+        navigate('/');
       })
       .catch((error) => {
         console.error(error);

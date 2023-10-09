@@ -7,6 +7,7 @@ import ServicesDetails from "../components/Main/ServicesDetails/ServicesDetails"
 import Booking from "../Pages/Booking/Booking";
 import Login from "../Pages/Login/Login";
 import Register from "../Pages/Home/Register/Register";
+import PrivateRoute from "./PrivateRoute";
 
 const myCreatedRoute = createBrowserRouter([
   {
@@ -29,7 +30,7 @@ const myCreatedRoute = createBrowserRouter([
       },
       {
         path: "/cardDetails/:id",
-        element: <ServicesDetails></ServicesDetails>,
+        element: <PrivateRoute><ServicesDetails></ServicesDetails></PrivateRoute>,
         loader: () => fetch("/event.json"),
       },
       {
