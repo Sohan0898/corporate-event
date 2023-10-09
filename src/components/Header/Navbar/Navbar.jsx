@@ -7,11 +7,13 @@ import { AuthContext } from "../../Provider/AuthProvider";
 const Navbar = () => {
   const { user, logOut } = useContext(AuthContext);
 
+
   const handleLogOut = () => {
     logOut()
       .then(() => console.log("Sign-out successful"))
       .catch((error) => console.log(error));
   };
+
 
   const navMenu = (
     <>
@@ -66,16 +68,39 @@ const Navbar = () => {
         </div>
         <div className="navbar-end">
           <Carts></Carts>
-
+        <div className="dropdown dropdown-end">
           {user ? (
             <>
-              <span>{user.email}</span>
-              <a
-                onClick={handleLogOut}
-                className="btn focus:outline-none font-bold bg-amber-500 hover:bg-amber-500  focus:ring-amber-500  rounded-lg  px-5 py-2 mr-2 mb-2"
+              <label tabIndex={0} className="btn btn-ghost btn-circle avatar ring ring-amber-500 online  ">
+                <div className="w-10 rounded-full">
+                 {
+                  user.photoURL ? <img src={user?.photoURL} /> : <img src="https://i.ibb.co/cQkSBMR/User-avatar-svg.png" alt="" />
+                 } 
+                </div>
+              </label>
+              <ul
+                tabIndex={0}
+                className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-56"
               >
-                Logout
-              </a>
+                
+                  <div className="w-full px-2 ">
+
+                  <p className="text-sm capitalize font-medium pb-2">
+                    {
+                      user.displayName? user.displayName : "Anonymous User"
+                    }
+                  </p>
+               
+                  <p className="text-sm font-medium pb-2 ">{user.email}</p>
+                  </div>
+                
+                <a
+                  onClick={handleLogOut}
+                  className="btn focus:outline-none font-bold bg-amber-500 hover:bg-amber-500  focus:ring-amber-500 w-full rounded-lg  px-5 py-2 mr-2 mb-2"
+                >
+                  Logout
+                </a>
+              </ul>
             </>
           ) : (
             <Link to={"/login"}>
@@ -84,6 +109,9 @@ const Navbar = () => {
               </button>
             </Link>
           )}
+        </div>
+               
+          
         </div>
       </div>
     </div>
