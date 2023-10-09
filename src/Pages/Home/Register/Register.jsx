@@ -1,13 +1,12 @@
 import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../../components/Provider/AuthProvider";
-import { toast } from "react-toastify";
-import { ToastContainer } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+import swal from "sweetalert";
+
 
 const Register = () => {
   const { signUpWithEmail } = useContext(AuthContext);
-  const [successFull, setSuccessFull] = useState("");
+  const [regError,setRegError]=useState('');
 
   const handleRegister = (e) => {
     e.preventDefault();
@@ -16,22 +15,36 @@ const Register = () => {
     const password = e.target.password.value;
     console.log(name, email, password);
 
-    setSuccessFull("");
+    if(password.length < 6) {
+      setRegError('Password must be six characters or longer!');
+      return;
+    }
+    else if(!/[A-Z]/.test(password)){
+      setRegError('Password must contain at least one capital letter!');
+      return;
+    }
+    else if(!/[!@#$%^&*]/.test(password)){
+      setRegError('Password must contain at least one special character!');
+      return;
+    }
 
+
+    setRegError('');
     // create user
     signUpWithEmail(email, password)
       .then((result) => {
         console.log(result.user);
-        setSuccessFull("User created successfully");
-
-        toast.success(successFull, setSuccessFull);
+        e.target.reset();
+        swal("Awesome!", "You Successfully Register", "success");
       })
       .catch((error) => {
         console.error(error);
+        setRegError(error.message);
       });
   };
 
   return (
+    
     <div className="flex justify-center items-center h-[80vh]">
       <div className="relative flex flex-col rounded-xl bg-transparent bg-clip-border text-gray-700 shadow-md p-5">
         <div className="relative mx-4 -mt-6 mb-4 grid h-28 place-items-center overflow-hidden rounded-xl bg-gradient-to-tr from-amber-600 to-amber-400 bg-clip-border text-white shadow-lg shadow-amber-500/40">
@@ -84,6 +97,9 @@ const Register = () => {
               </label>
             </div>
           </div>
+          {
+          regError && <p className="text-red-600 font-semibold" >{regError}</p>
+        }
           <div className="inline-flex items-center">
             <label
               className="relative -ml-2.5 flex cursor-pointer items-center rounded-full p-3"
@@ -135,6 +151,8 @@ const Register = () => {
           </button>
         </form>
 
+       
+
         <p className=" mt-4 block text-center font-sans text-base font-normal leading-relaxed text-gray-700 antialiased">
           Already have an account?
           <Link to={"/login"}>
@@ -148,18 +166,7 @@ const Register = () => {
         </p>
       </div>
 
-      <ToastContainer
-        position="bottom-center"
-        autoClose={5000}
-        hideProgressBar={false}
-        newestOnTop={false}
-        closeOnClick
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
-        theme="light"
-      ></ToastContainer>
+      
     </div>
   );
 };

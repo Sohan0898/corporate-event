@@ -1,25 +1,23 @@
 /* eslint-disable react/no-unescaped-entities */
 import { Link } from "react-router-dom";
 import { AiFillGoogleCircle } from "react-icons/ai";
-import { useContext, useState } from "react";
+import { useContext, useState} from "react";
 import { AuthContext } from "../../components/Provider/AuthProvider";
-import { toast } from "react-toastify";
-import { ToastContainer } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+import swal from 'sweetalert';
+
 
 const Login = () => {
   const { googleSignIn, signInWithEmail } = useContext(AuthContext);
-  const [successFull, setSuccessFull] = useState("");
+  const [logError,setLogError]=useState('');
 
   const handleGoogleSignIn = () => {
-    setSuccessFull("");
+
 
     googleSignIn()
       .then((result) => {
         console.log(result.user);
-        setSuccessFull("User Logged successfully");
-
-        toast.success(successFull, setSuccessFull);
+        swal("Awesome!", "You Successfully Logged in", "success");
+    
       })
       .catch((error) => {
         console.error(error);
@@ -32,24 +30,26 @@ const Login = () => {
     const password = e.target.password.value;
     console.log(email, password);
 
-    setSuccessFull("");
+
+    setLogError('');
+
     // login user
 
     signInWithEmail(email, password)
       .then((result) => {
         console.log(result.user);
         e.target.reset();
-        setSuccessFull("User Logged successfully");
-
-        toast.success(successFull, setSuccessFull);
+        swal("Awesome!", "You Successfully Logged in", "success");
       })
       .catch((error) => {
         console.error(error);
+        setLogError(error.message);
       });
   };
 
   return (
     <div className="flex justify-center items-center h-[80vh]">
+      
       <div className="relative flex w-96 flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">
         <div className="relative mx-4 -mt-6 mb-4 grid h-28 place-items-center overflow-hidden rounded-xl bg-gradient-to-tr from-amber-600 to-amber-400 bg-clip-border text-white shadow-lg shadow-amber-500/40">
           <h3 className="block font-sans text-4xl font-semibold leading-snug tracking-normal text-white antialiased">
@@ -82,6 +82,10 @@ const Login = () => {
                 Password
               </label>
             </div>
+
+            {
+          logError && <p className="text-red-600 font-semibold pt-2" >{logError}</p>
+        }
             <div className="-ml-2.5">
               <div className="inline-flex items-center">
                 <label
@@ -158,18 +162,7 @@ const Login = () => {
           </button>
         </div>
       </div>
-      <ToastContainer
-        position="bottom-center"
-        autoClose={5000}
-        hideProgressBar={false}
-        newestOnTop={false}
-        closeOnClick
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
-        theme="light"
-      ></ToastContainer>
+      
     </div>
   );
 };
